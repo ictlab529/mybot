@@ -14,7 +14,7 @@ def main():
     app=Application.builder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start",start))
-    app.add_handler(MessageHandler(filters.Text & ~filters.COMMAND, echo))
+    app.add_handler(MessageHandler(filters.Text , echo))
     print("Bot is running ...............")
 
     app.run_polling()
